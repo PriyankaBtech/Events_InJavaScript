@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeStamp</title>
+
+    <!-- CSS -->
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HTML -->
+    <p>timestamp for the keypress event</p>
+    <p>timeStamp: <span id="time">-</span></p>
+
+    <!-- JavaScript -->
+    <script>
+        function getTime(event) {
+            const time = document.getElementById("time");
+            // console.log(time) // <span id="time">-</span>
+            // console.log(time.firstChild) // "-"
+            // console.log(time.firstChild.nodeValue) // '-'
+            
+            time.firstChild.nodeValue = event.timeStamp;
+        }
+        document.body.addEventListener("keypress", getTime);
+
+        // The timeStamp read-only property of the Event interface returns the time (in milliseconds) at which the event was created.
+    </script>
+</body>
+</html>
