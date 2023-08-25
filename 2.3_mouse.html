@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mousedown | mouseup event</title>
+</head>
+<body style="background-color: black; color: white;">
+    <!-- html -->
+    <p>click the Text</p>
+    <p id="log">let's Change the color</p>
+    
+    <!-- Js -->
+    <script>
+        // mouseDown() function sets the color of this text to red.
+        // mouseUp() function sets the color of this text to blue.
+
+        document.addEventListener('mousedown', function() {
+            document.getElementById("log").style.color = "red"
+
+        })
+        document.addEventListener('mouseup', function() {
+            document.getElementById("log").style.color = "blue"
+
+        })
+        // NOTE : // mouseDown occurs when the user presses a key.
+                 // mouseUp occurs when the user releases a key
+
+        // click event in that click is fired after a full click action occurs, the mouse button is pressed and released while the pointer remains inside the same element.      
+        
+    </script>
+</body>
+</html>
