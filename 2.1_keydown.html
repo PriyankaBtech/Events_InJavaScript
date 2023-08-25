@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keydown</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <!-- html -->
+    <input placeholder="Click here, then press down a key." size="40" />
+    <p id="log"></p>
+
+    <!-- js -->
+    <script>
+        const input = document.querySelector('input')
+        const log = document.querySelector('#log')
+
+        input.addEventListener('keydown', function(e) {
+            //console.log(e) // KeyboardEvent {isTrusted: true, key: 'h', code: 'KeyH', location: 0, ctrlKey: false, …}
+            //console.log(e.code) // ex. keyH, keyG etc
+            //log.textContent += ` ${e.code}`
+            log.textContent = ` ${e.code}`
+        })
+
+        // NOTE : // KeyDown occurs when the user presses a key.
+                 // KeyUp occurs when the user releases a key
+    </script>
+    
+</body>
+</html>
