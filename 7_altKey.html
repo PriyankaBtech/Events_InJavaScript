@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TouchEvent: altKey</title>
+</head>
+<body style="background-color: black; color: azure;">
+
+    <!-- html -->
+    <div id="log"></div>
+
+    <!-- Js -->
+    <script>
+        const check = document.getElementById('log')
+
+        document.addEventListener("touchstart", function(e) {
+            if (e.altKey) {
+                check.innerText = "The ALT key was pressed!"
+            } else {
+                check.innerText = "The ALT key was NOT pressed!"
+            }
+            
+            // console.log(`altKey = ${e.altKey}`);
+            // console.log(`ctrlKey = ${e.ctrlKey}`);
+            // console.log(`metaKey = ${e.metaKey}`);
+            // console.log(`shiftKey = ${e.shiftKey}`);
+        })
+    </script>
+    
+</body>
+</html>
