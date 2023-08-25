@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clientX | clientY</title>
+</head>
+<body style="background-color: black; color: white">
+
+    <!-- html -->
+    <p>Click anywhere in this document to get the x and y coordinates of the mouse pointer, relative to the window.</p>
+    <p id="client"></p>
+
+    <!-- Js -->
+    <script>
+        const client = document.getElementById('client')
+
+        document.addEventListener('click', function(e) {
+            // console.log(e.clientX)
+            // console.log(e.clientY)
+            
+            let x = e.clientX
+            let y = e.clientY
+            client.innerText = `X client: ${x}, Y client: ${y}`
+        })
+        
+    </script>
+    
+</body>
+</html>
