@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>target</title>
+</head>
+<body onclick="check(event)" style="background-color: black; color: azure;">
+
+    <!-- HTML -->
+    <h1>HTML DOM Events</h1>
+    <h2>The target Property</h2>
+    <p>Click on any elements in this document to find out which element triggered the onclick event.</p>
+    <button >This is a button</button>
+    <p id="demo"></p>
+
+    <!-- Js -->
+    <script>
+        function check(event) {
+            // console.log(event.target)
+            // console.log(event.target.nodeName)
+
+            let text = event.target.nodeName
+            document.getElementById("demo").innerHTML = text
+        }
+    </script>
+    
+</body>
+</html>
