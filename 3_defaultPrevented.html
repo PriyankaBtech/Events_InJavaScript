@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>defaultPrevented event</title>
+</head>
+<body style="background-color: black; color: azure;">
+
+    <!-- html -->
+    <a id="log" href="https://google.com/">Go to google.com</a>
+    <p>The preventDefault() method will prevent the link above from following the URL</p>
+
+    <!-- js -->
+    <script>
+        document.getElementById('log').addEventListener('click', function(e) {
+            e.preventDefault()
+            alert("This Link is prevented")
+        })      
+
+    </script>
+    
+</body>
+</html>
