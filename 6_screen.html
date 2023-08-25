@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>screenX | screenY</title>
+</head>
+<body style="background-color: black; color: white">
+
+    <!-- html -->
+    <p>Click different places in this document to view the x and y coordinates of the mouse pointer, relative to the screen.</p>
+    <p id="screen"></p>
+
+    <!-- Js -->
+    <script>
+        const screen = document.getElementById('screen')
+
+        document.addEventListener('click', function(e) {
+            // console.log(e.screenX)
+            // console.log(e.screenY)
+            
+            let x = e.screenX
+            let y = e.screenY
+            screen.innerText = `X screen: ${x}, Y screen: ${y}`
+        })
+        
+    </script>
+    
+</body>
+</html>
